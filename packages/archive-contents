@@ -1,8 +1,0 @@
-(1
- (clj-data .
-           [(0 0 17)
-            ((emacs
-              (27.1))
-             (ivy
-              (0 13 0)))
-            "An emacs library for manipulating/printing/analysing/browsing Clojure-like data" tar nil]))
