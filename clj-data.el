@@ -24,6 +24,8 @@
 
 ;; Code:
 
+(defconst clj-data/version "0.0.1")
+
 (defun clj-data/hash-map (&rest data)
   (let ((l (length data)))
     (when (not (= 0 (logand l 1)))
