@@ -153,6 +153,18 @@
         ;; conj to hash-tables not yet implemented
         (t (error "cannot conj to %s" coll))))
 
+(defun clj-data/into (to from)
+  (cond ((listp from) (dolist (x from)
+                        (setq to (clj-data/conj to x))))
+        ((arrayp from) (let* ((l (length from))
+                              (i 0))
+                         (while (< i l)
+                           (setq to (clj-data/conj to (aref from i)))
+                           (setq i (+ i 1)))))
+        ;; into from hash-tables not yet implemented
+        (t (error "cannot into from %s" from)))
+  to)
+
 (defun clj-data/count (coll)
   (if (hash-table-p coll)
       (hash-table-count coll)
