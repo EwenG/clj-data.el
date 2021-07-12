@@ -17,14 +17,14 @@
 
 ;; This file is not part of GNU Emacs.
 
-;; Version 0.0.1
+;; Version 0.0.2
 ;; Package-Requires: ((emacs "27.1") (ivy "0.13.0"))
 
 ;; Commentary:
 
 ;; Code:
 
-(defconst clj-data/version "0.0.1")
+(defconst clj-data/version "0.0.2")
 
 (defun clj-data/hash-map (&rest data)
   (let ((l (length data)))
